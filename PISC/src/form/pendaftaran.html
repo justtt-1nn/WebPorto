@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind Style -->
+    <link rel="stylesheet" href="../../dist/tailwind.css" />
+    <link
+      rel="shortcut icon"
+      href="../../public/assets/images/icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <title>Pendaftaran Si Kecil - PISC</title>
+  </head>
+
+  <body class="sm:bg-white md:bg-gray-100 lg:bg-xp">
+    <header class="container-fluid top-0 w-full z-40 border-b-black">
+      <nav class="bg-white border border-b-xn py-4">
+        <div
+          class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
+        >
+          <a href="#" class="flex items-center">
+            <img
+              src="../../public/assets/images/logo.svg"
+              class=""
+              alt="Logo PPDB Samarinda"
+            />
+          </a>
+          <div class="flex items-center lg:order-2">
+            <a href="#" class="text-gray-600 font-medium rounded-lg text-sm"
+              >Kembali</a
+            >
+            <!-- <button data-collapse-toggle="mobile-menu-2" type="button"
+                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                        aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mt-8 mb-8">
+      <div
+        class="max-w-2xl mx-auto bg-white px-8 py-6 rounded-lg border border-xn"
+      >
+        <form id="stepper-form" method="post" action="process_registration.php">
+          <!-- Step 1: Personal Data -->
+          <div class="step active" data-step="1">
+            <div class="w-full flex items-center gap-2 mb-6">
+              <div class="w-full">
+                <div class="bg-blue-700 h-1 rounded-full"></div>
+                <h2 class="text-sm text-blue-700 font-semibold">Data Diri</h2>
+              </div>
+              <div class="w-full">
+                <div class="bg-gray-400 h-1 rounded-full"></div>
+                <h2 class="text-sm text-gray-400 font-semibold">
+                  Rencana Pelatihan
+                </h2>
+              </div>
+              <div class="w-full">
+                <div class="bg-gray-400 h-1 rounded-full"></div>
+                <h2 class="text-sm text-gray-400 font-semibold">Pembayaran</h2>
+              </div>
+            </div>
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Nama lengkap</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Masukan nama lengkap anak"
+                class="block placeholder:text-sm w-full mt-2 border border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+                required
+              />
+            </div>
+            <div class="grid grid-cols-12 gap-4 mb-4">
+              <div class="col-span-6 lg:col-span-6">
+                <label class="block text-sm font-semibold text-gray-700 mb-2"
+                  >Jenis kelamin</label
+                >
+                <div class="flex items-center py-3">
+                  <div class="flex items-center me-4">
+                    <input
+                      id="inline-radio"
+                      type="radio"
+                      value=""
+                      name="inline-radio-group"
+                      class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label
+                      for="inline-radio"
+                      class="ms-2 text-sm font-medium text-gray-900"
+                      >Laki-laki</label
+                    >
+                  </div>
+                  <div class="flex items-center me-4">
+                    <input
+                      id="inline-2-radio"
+                      type="radio"
+                      value=""
+                      name="inline-radio-group"
+                      class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label
+                      for="inline-2-radio"
+                      class="ms-2 text-sm font-medium text-gray-900"
+                      >Perempuan</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-6 lg:col-span-6">
+                <label class="block text-sm font-semibold text-gray-700 mb-2"
+                  >Tanggal lahir</label
+                >
+                <div class="relative max-w-sm">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    datepicker
+                    id="default-datepicker"
+                    type="text"
+                    class="border-gray-300 bg-white text-gray-700 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 py-3 px-4"
+                    placeholder="Masukan tanggal lahir"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Nama Orang Tua</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Masukan nama lengkap orang tua"
+                class="block w-full placeholder:text-sm mt-2 border border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+                required
+              />
+            </div>
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Alamat lengkap domisili</label
+              >
+              <textarea
+                placeholder="Lengkapi alamat dengan detail yang jelas"
+                name=""
+                id=""
+                class="block resize-none w-full mt-2 border placeholder:text-sm border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+              ></textarea>
+            </div>
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Alamat email</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Masukan alamat email"
+                class="block w-full placeholder:text-sm mt-2 border border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+                required
+              />
+            </div>
+
+            <!-- PASSWORD DI BUAT OTOMATIS DI ISI KAN NANTI ADMIN KIRIMKAN MELALUI EMAIL ATAU WA -->
+            <div class="col-span-6 sm:col-span-3 mb-4 sr-only">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Password</label
+              >
+              <input
+                type="password"
+                name="email"
+                id="email"
+                placeholder=""
+                class="block w-full placeholder:text-sm mt-2 border border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+              />
+            </div>
+            <div class="grid grid-cols-12 gap-4 mb-4">
+              <div class="col-span-6 lg:col-span-6">
+                <label class="block text-sm font-semibold text-gray-700 mb-2"
+                  >Nomor Telpon/Whatsapp</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Masukan nomor seluler/whatsapp"
+                  class="block w-full placeholder:text-sm mt-2 border border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+                  required
+                />
+                <p class="text-[10px] mt-2 font-medium text-gray-400">
+                  Nomor seluler atau whatsapp pastikan nomornya aktif
+                </p>
+              </div>
+              <div class="col-span-6 lg:col-span-6">
+                <label class="block text-sm font-semibold text-gray-700 mb-2"
+                  >Nomor Darurat</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Masukan nomor darurat"
+                  class="block w-full placeholder:text-sm mt-2 border border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+                  required
+                />
+                <p class="text-[10px] mt-2 font-medium text-gray-400">
+                  digunakan jika nomor utama tidak dapat dihubungi
+                </p>
+              </div>
+            </div>
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Memiliki gangguan kesehatan</label
+              >
+              <div class="flex items-center py-3">
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Paru-paru</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-2-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Jantung</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-2-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Otot</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-2-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Syaraf</label
+                  >
+                </div>
+              </div>
+              <textarea
+                placeholder="Tuliskan informasi terkait kondisi medis anak jika ada, akar dapat membantu kami memberikan perhatian ekstra selama latihan."
+                name=""
+                id=""
+                class="block resize-none w-full mt-2 border placeholder:text-sm border-gray-300 bg-white text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-transparent appearance-none"
+              ></textarea>
+            </div>
+            <div
+              class="mt-8 flex flex-col sm:flex-row items-center justify-end border-t border-gray-300 pt-4 gap-2"
+            >
+              <a
+                type="button"
+                href="#"
+                class="w-full sm:w-auto text-sm border rounded border-gray-300 font-semibold leading-6 px-8 py-3 text-gray-900"
+                >Batal</a
+              >
+              <button
+                type="submit"
+                class="next w-full sm:w-auto rounded border bg-blue-700 border-blue-700 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              >
+                Lanjutkan ke Pilihan Paket
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Training Package Selection -->
+          <div class="step hidden" data-step="2">
+            <div class="w-full flex items-center gap-2 mb-6">
+              <div class="w-full">
+                <div class="bg-gray-400 h-1 rounded-full"></div>
+                <h2 class="text-sm text-gray-400 font-semibold">Data Diri</h2>
+              </div>
+              <div class="w-full">
+                <div class="bg-blue-700 h-1 rounded-full"></div>
+                <h2 class="text-sm text-blue-700 font-semibold">
+                  Rencana Pelatihan
+                </h2>
+              </div>
+              <div class="w-full">
+                <div class="bg-gray-400 h-1 rounded-full"></div>
+                <h2 class="text-sm text-gray-400 font-semibold">Pembayaran</h2>
+              </div>
+            </div>
+
+            <!-- Exercise Type -->
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Jenis Latihan</label
+              >
+              <div class="flex items-center py-3">
+                <div class="flex items-center me-4">
+                  <input
+                    type="radio"
+                    name="exercise_type"
+                    value="private"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Private</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="radio"
+                    name="exercise_type"
+                    value="team"
+                    name="inline-radio-group"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Club</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Pilihan pelatih</label
+              >
+              <div class="flex items-center py-3">
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-radio"
+                    type="radio"
+                    name="trainer"
+                    value="male"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Laki-laki</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-2-radio"
+                    type="radio"
+                    name="trainer"
+                    value="female"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Perempuan</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-2-radio"
+                    type="radio"
+                    name="trainer"
+                    value="free"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Bebas</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Target latihan</label
+              >
+              <div class="flex items-center py-3">
+                <div class="flex items-center me-4">
+                  <input
+                    type="radio"
+                    name="training_target"
+                    value="health"
+                    name="inline-radio-group"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Keterampilan hidup</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="radio"
+                    name="training_target"
+                    value="skill"
+                    name="inline-radio-group"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Kesehatan</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="radio"
+                    name="training_target"
+                    value="achievement"
+                    name="inline-radio-group"
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-radio"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Prestasi</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Packages -->
+            <div
+              id="package-options"
+              class="hidden col-span-6 sm:col-span-3 mb-4"
+            >
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Program Latihan</label
+              >
+              <div id="packages" class="space-y-4">
+                <!-- Package options will be dynamically inserted here -->
+              </div>
+            </div>
+
+            <!-- Training Days -->
+
+            <div
+              id="training-days"
+              class="hidden col-span-6 sm:col-span-3 mb-4"
+            >
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Jadwal latihan</label
+              >
+              <div class="flex items-center py-3">
+                <div class="flex items-center me-4">
+                  <input
+                    type="checkbox"
+                    name="training_days[]"
+                    value="Senin"
+                    disabled
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Senin</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="checkbox"
+                    name="training_days[]"
+                    value="Selasa"
+                    disabled
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Selasa</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="checkbox"
+                    name="training_days[]"
+                    value="Rabu"
+                    disabled
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Rabu</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="checkbox"
+                    name="training_days[]"
+                    value="Kamis"
+                    disabled
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Kamis</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="checkbox"
+                    name="training_days[]"
+                    value="Jumat"
+                    disabled
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Jumat</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="checkbox"
+                    name="training_days[]"
+                    value="Sabtu"
+                    disabled
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Sabtu</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    type="checkbox"
+                    name="training_days[]"
+                    value="Minggu"
+                    disabled
+                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="inline-2-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >Minggu</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Training Hours -->
+            <div id="training-hours" class="hidden col-span-6 sm:col-span-3">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Jam Latihan</label
+              >
+              <select
+                name="training_hour"
+                class="w-xl mt-2 border border-gray-300 bg-white text-gray-700 py-3 px-4 rounded"
+              >
+                <option value="7:00">7:00 AM</option>
+                <option value="9:00">9:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+              </select>
+            </div>
+
+            <div
+              class="mt-8 flex flex-col sm:flex-row items-center justify-end border-t border-gray-300 pt-4 gap-2"
+            >
+              <button
+                type="button"
+                href="#"
+                class="prev w-full sm:w-auto text-sm border rounded border-gray-300 font-semibold leading-6 px-8 py-3 text-gray-900"
+              >
+                Sebelumnya
+              </button>
+              <button
+                type="submit"
+                class="next w-full sm:w-auto rounded border bg-blue-700 border-blue-700 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              >
+                Lanjutkan ke Pembayaran
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Payment Form -->
+          <div class="step hidden" data-step="3">
+            <div class="w-full flex items-center gap-2 mb-6">
+              <div class="w-full">
+                <div class="bg-gray-400 h-1 rounded-full"></div>
+                <h2 class="text-sm text-gray-400 font-semibold">Data Diri</h2>
+              </div>
+              <div class="w-full">
+                <div class="bg-gray-400 h-1 rounded-full"></div>
+                <h2 class="text-sm text-gray-400 font-semibold">
+                  Rencana Pelatihan
+                </h2>
+              </div>
+              <div class="w-full">
+                <div class="bg-blue-700 h-1 rounded-full"></div>
+                <h2 class="text-sm text-blue-700 font-semibold">Pembayaran</h2>
+              </div>
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Program Latihan</label
+              >
+              <div>
+                <label
+                  for="hosting-big"
+                  class="inline-flex items-start justify-between w-full px-5 py-4 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600"
+                >
+                  <div class="block">
+                    <h2 class="text-base font-bold text-gray-800">
+                      Paket Dasar
+                    </h2>
+                    <p class="text-sm text-gray-600">Cocok untuk pemula.</p>
+                    <div class="mt-2">
+                      <h2 class="text-sm text-gray-800 font-bold">Fasilitas</h2>
+                      <ul class="list-disc ml-4 text-sm">
+                        <li>1 sesi/minggu (1 jam per sesi)</li>
+                        <li>1 sesi/minggu (1 jam per sesi)</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <h2
+                      class="text-right leading-none text-blue-700 text-base font-bold"
+                    >
+                      Rp1.500.000<br />
+                      <span class="text-sm font-medium text-gray-500"
+                        >/bulan</span
+                      >
+                    </h2>
+                  </div>
+                </label>
+              </div>
+              <p class="text-sm text-gray-500 mt-4">
+                Tagihan untuk bulan selanjutnya akan tersedia di dashboard anda.
+                anda juga dapat melakukan perubahan program latihan langsung
+                melalui dashboard kapan saja.
+              </p>
+            </div>
+
+            <hr class="border border-xn my-4" />
+
+            <div
+              class="col-span-6 sm:col-span-3 mb-2 flex justify-between items-center"
+            >
+              <h2 class="text-sm font-semibold text-gray-800">Subtotal</h2>
+              <h3 class="text-sm font-semibold text-gray-800">Rp1.500.000</h3>
+            </div>
+            <div
+              class="col-span-6 sm:col-span-3 mb-4 flex justify-between items-center"
+            >
+              <h2 class="text-xs font-medium text-gray-800">Pajak</h2>
+              <h3 class="text-xs font-medium text-gray-800">Rp24.000</h3>
+            </div>
+
+            <hr class="border border-xn my-4" />
+
+            <div
+              class="col-span-6 sm:col-span-3 mb-10 flex justify-between items-center"
+            >
+              <h2 class="text-xl font-bold text-gray-800">Total</h2>
+              <h3 class="text-xl font-bold text-gray-800">Rp1.524.000</h3>
+            </div>
+
+            <div class="col-span-6 sm:col-span-3 mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Metode pembayaran</label
+              >
+              <label class="block text-sm font-normal text-gray-700 mb-2"
+                >1 hari kerja:</label
+              >
+
+              <div
+                class="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700"
+              >
+                <input
+                  id="bordered-radio-1"
+                  type="radio"
+                  value=""
+                  name="bordered-radio"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="bordered-radio-1"
+                  class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >BCA</label
+                >
+                <img
+                  src="../../public/assets/images/bca.png"
+                  class="w-20 me-4"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="flex py-2 mt-4">
+              <div class="flex items-center h-5">
+                <input
+                  id="helper-checkbox"
+                  aria-describedby="helper-checkbox-text"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500"
+                />
+              </div>
+              <div class="ms-2 text-sm text-gray-700">
+                <label for="helper-checkbox" class="font-medium"
+                  >Dengan ini, Saya setuju dengan
+                  <a class="text-blue-500" href="">Ketentuan Penggunaan</a> kami
+                  dan mengonfirmasi bahwa saya telah membaca
+                  <a class="text-blue-500" href="">kebijakan Privasi</a>
+                  kami.</label
+                >
+              </div>
+            </div>
+
+            <div
+              class="mt-8 flex flex-col sm:flex-row items-center justify-end border-t border-gray-300 pt-4 gap-2"
+            >
+              <button
+                type="button"
+                href="#"
+                class="prev w-full sm:w-auto text-sm border rounded border-gray-300 font-semibold leading-6 px-8 py-3 text-gray-900"
+              >
+                Sebelumnya
+              </button>
+              <a
+                type="submit"
+                href="konfirmasiPembayaran.html"
+                class="next w-full sm:w-auto rounded border bg-blue-700 border-blue-700 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >Selesaikan Pendaftaran</a
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script>
+      const steps = document.querySelectorAll(".step");
+      const nextButtons = document.querySelectorAll(".next");
+      const prevButtons = document.querySelectorAll(".prev");
+
+      let currentStep = 0;
+
+      function showStep(step) {
+        steps.forEach((s, index) => {
+          s.classList.toggle("hidden", index !== step);
+        });
+      }
+
+      nextButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep(currentStep);
+          }
+        });
+      });
+
+      prevButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+          }
+        });
+      });
+
+      showStep(currentStep);
+
+      const exerciseRadios = document.querySelectorAll(
+        'input[name="exercise_type"]'
+      );
+      const targetRadios = document.querySelectorAll(
+        'input[name="training_target"]'
+      );
+      const packageOptions = document.getElementById("package-options");
+      const packagesContainer = document.getElementById("packages");
+      const trainingDays = document.getElementById("training-days");
+      const trainingHours = document.getElementById("training-hours");
+      const dayCheckboxes = document.querySelectorAll(
+        'input[name="training_days[]"]'
+      );
+
+      const packages = {
+        private: {
+          health: [
+            {
+              name: "Package A",
+              price: "$100",
+              benefits: "2 sessions/week",
+              days: 2,
+            },
+            {
+              name: "Package B",
+              price: "$200",
+              benefits: "3 sessions/week",
+              days: 3,
+            },
+            {
+              name: "Package C",
+              price: "$300",
+              benefits: "5 sessions/week",
+              days: 5,
+            },
+          ],
+          skill: [
+            {
+              name: "Package G",
+              price: "$120",
+              benefits: "2 sessions/week",
+              days: 2,
+            },
+            {
+              name: "Package H",
+              price: "$220",
+              benefits: "3 sessions/week",
+              days: 3,
+            },
+            {
+              name: "Package I",
+              price: "$320",
+              benefits: "5 sessions/week",
+              days: 5,
+            },
+          ],
+          achievement: [
+            {
+              name: "Package J",
+              price: "$150",
+              benefits: "2 sessions/week",
+              days: 2,
+            },
+            {
+              name: "Package K",
+              price: "$250",
+              benefits: "3 sessions/week",
+              days: 3,
+            },
+            {
+              name: "Package L",
+              price: "$350",
+              benefits: "5 sessions/week",
+              days: 5,
+            },
+          ],
+        },
+        team: {
+          health: [
+            {
+              name: "Package D",
+              price: "$80",
+              benefits: "2 sessions/week",
+              days: 2,
+            },
+            {
+              name: "Package E",
+              price: "$150",
+              benefits: "3 sessions/week",
+              days: 3,
+            },
+            {
+              name: "Package F",
+              price: "$250",
+              benefits: "5 sessions/week",
+              days: 5,
+            },
+          ],
+          skill: [
+            {
+              name: "Package M",
+              price: "$100",
+              benefits: "2 sessions/week",
+              days: 2,
+            },
+            {
+              name: "Package N",
+              price: "$180",
+              benefits: "3 sessions/week",
+              days: 3,
+            },
+            {
+              name: "Package O",
+              price: "$280",
+              benefits: "5 sessions/week",
+              days: 5,
+            },
+          ],
+          achievement: [
+            {
+              name: "Package P",
+              price: "$130",
+              benefits: "2 sessions/week",
+              days: 2,
+            },
+            {
+              name: "Package Q",
+              price: "$230",
+              benefits: "3 sessions/week",
+              days: 3,
+            },
+            {
+              name: "Package R",
+              price: "$330",
+              benefits: "5 sessions/week",
+              days: 5,
+            },
+          ],
+        },
+      };
+
+      function updatePackages() {
+        const exerciseType = document.querySelector(
+          'input[name="exercise_type"]:checked'
+        )?.value;
+        const trainingTarget = document.querySelector(
+          'input[name="training_target"]:checked'
+        )?.value;
+
+        if (exerciseType && trainingTarget) {
+          const selectedPackages = packages[exerciseType][trainingTarget];
+          packagesContainer.innerHTML = ""; // Kosongkan kontainer sebelum menambahkan paket baru
+
+          // Tambahkan elemen ul dengan gap antar paket
+          const packageList = document.createElement("ul");
+          packageList.className = "grid w-full gap-2 md:grid-cols-1";
+
+          selectedPackages.forEach((pkg) => {
+            const packageItem = document.createElement("li");
+            packageItem.innerHTML = `
+                        <input type="radio" id="${pkg.name}" name="package" value="${pkg.name}" data-days="${pkg.days}" class="hidden peer">
+                        <label for="${pkg.name}" class="inline-flex items-start justify-between w-full px-5 py-4 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 hover:text-gray-600 hover:bg-gray-100">
+                            <div class="block">
+                                <h2 class="text-base font-bold text-gray-800">${pkg.name}</h2>
+                                <p class="text-sm text-gray-600">Cocok untuk ${trainingTarget}.</p>
+                                <div class="mt-2">
+                                    <h2 class="text-sm text-gray-800 font-bold">Fasilitas</h2>
+                                    <ul class="text-sm">
+                                        <li>${pkg.benefits}</li>
+                                        <li>${pkg.days} sesi/minggu (1 jam per sesi)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="text-right leading-none text-blue-700 text-base font-bold">${pkg.price}<br>
+                                    <span class="text-sm font-medium text-gray-500">/bulan</span>
+                                </h2>
+                            </div>
+                        </label>
+                    `;
+            packageList.appendChild(packageItem);
+          });
+
+          packagesContainer.appendChild(packageList);
+
+          packageOptions.style.display = "block";
+          trainingDays.style.display = "block";
+          trainingHours.style.display = "block";
+        }
+      }
+
+      function updateDayCheckboxes(maxDays) {
+        let checkedCount = 0;
+
+        dayCheckboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+          checkbox.disabled = false;
+          checkbox.addEventListener("change", () => {
+            checkedCount = document.querySelectorAll(
+              'input[name="training_days[]"]:checked'
+            ).length;
+            dayCheckboxes.forEach((box) => {
+              if (!box.checked) {
+                box.disabled = checkedCount >= maxDays;
+              }
+            });
+          });
+        });
+      }
+
+      packagesContainer.addEventListener("change", (e) => {
+        if (e.target.name === "package") {
+          const maxDays = parseInt(e.target.dataset.days, 10);
+          updateDayCheckboxes(maxDays);
+        }
+      });
+
+      exerciseRadios.forEach((radio) =>
+        radio.addEventListener("change", updatePackages)
+      );
+      targetRadios.forEach((radio) =>
+        radio.addEventListener("change", updatePackages)
+      );
+    </script>
+
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>

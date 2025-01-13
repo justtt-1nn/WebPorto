@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind Style -->
+    <link rel="stylesheet" href="../dist/tailwind.css" />
+    <link
+      rel="shortcut icon"
+      href="../public/assets/images/icon.png"
+      type="image/x-icon"
+    />
+    <title>Masuk ke Poseidon Monitoring</title>
+  </head>
+
+  <body class="bg-[#F3F4F6] relative">
+    <nav
+      class="bg-transparent container-fluid absolute font uppercase w-full z-20 top-0 start-0 border-b border-gray-200"
+    >
+      <div class="flex flex-wrap items-center justify-between py-4 px-20">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="../public/assets/images/logoputih.svg"
+            class="h-8"
+            alt="PISC Logo"
+          />
+        </a>
+        <div class="flex space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex text-base font-normal items-center gap-4 flex-col p-4 md:p-0 mt-4border border-gray-100 rounded-lg rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+          >
+            <li>
+              <a
+                href="#"
+                class="block text-white bg-blue-700 rounded md:bg-transparent"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-white rounded hover:bg-gray-100 md:hover:bg-transparent"
+                >Coach</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-white rounded hover:bg-gray-100 md:hover:bg-transparent"
+                >Membership</a
+              >
+            </li>
+            <li>
+              <a
+                href="./form/login.html"
+                class="block border border-white py-1.5 px-5 text-white font-medium rounded-full hover:bg-gray-100 md:hover:bg-transparent"
+                >Sign in</a
+              >
+            </li>
+            <li>
+              <a href="./form/pendaftaran.html" class="flex items-center">
+                <span
+                  class="block border border-white py-1.5 px-5 bg-white text-gray-800 font-medium rounded-full hover:bg-gray-100"
+                  >Join Club</span
+                ><span
+                  class="w-10 h-10 flex items-center bg-white gap-2 justify-center hover:bg-gray-100 text-gray-800 rounded-full"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FORM -->
+    <main class="">
+      <section
+        class="relative bg-[url('../public/assets/images/bg.png')] w-full px-24 pb-20 pt-28 h-screen bg-no-repeat bg-cover bg-center"
+      >
+        <div class="absolute right-0 top-[285px] bg-white pr-24 pl-8 py-5">
+          <h2 class="font text-base font-bold leading-5">
+            LOCATED IN THE <br />
+            WONOSOBO, CENTRAL JAVA <br />
+            INDONESIA
+          </h2>
+        </div>
+        <div class="h-full flex flex-col justify-between">
+          <h2 class="uppercase text-[80px] text-white font-black leading-[82%]">
+            KIDS<br />
+            swimming<br />
+            club
+          </h2>
+          <div class="flex justify-between items-end">
+            <div class="flex flex-col justify-start w-fit gap-4">
+              <div class="flex flex-row items-center gap-6">
+                <div class="flex flex-col text-white">
+                  <h2 class="font text-6xl font-bold">500+</h2>
+                  <p class="text-base uppercase font-medium">Members</p>
+                </div>
+                <div class="bg-white w-0.5 h-16"></div>
+                <div class="flex flex-col text-white ml-2">
+                  <h2 class="font text-6xl font-bold">98%</h2>
+                  <p class="text-base uppercase font-medium">
+                    satisfied parents
+                  </p>
+                </div>
+              </div>
+              <p
+                class="pt-4 border border-t-white bordet-t-2 border-b-0 border-x-0 text-white text-base font-normal uppercase"
+              >
+                Expert training for the next generation of swimming stars
+              </p>
+            </div>
+            <div>
+              <p class="text-white uppercase font leading-4">
+                KIDS<br />
+                swimming club<br />
+                SINCE ©2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div
+          class="px-8 py-10 lg:px-24 lg:py-16 flex flex-col items-start mb-4"
+        >
+          <label
+            class="px-4 uppercase text-sm py-2 border border-gray-500 rounded-full"
+            >Programs</label
+          >
+          <h2 class="text-4xl font-normal mt-2">Explore the Poseidon Class</h2>
+        </div>
+        <!-- CARD KETERANGAN PROGRAM -->
+        <div>
+          <div class="px-8 py-10 lg:px-24 lg:py-16 border-y border-gray-300">
+            <div class="flex justify-between">
+              <div class="flex justify-between flex-col">
+                <div>
+                  <h2 class="text-6xl font-medium">Life Skills</h2>
+                  <p class="text-base mt-2 max-w-[520px]">
+                    Your child will learn basic swimming skills for water
+                    safety. Suitable for beginners who want to master basic
+                    techniques with confidence.
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 font">
+                  <label
+                    class="px-4 uppercase text-base py-2 border border-gray-500 rounded-full"
+                    >Babies ( 6 - 24 months )</label
+                  >
+                  <label
+                    class="px-4 uppercase text-base py-2 border border-gray-500 rounded-full"
+                    >Toddlers ( 2 - 4 )</label
+                  >
+                  <label
+                    class="px-4 uppercase text-base py-2 border border-gray-500 rounded-full"
+                    >Kids ( 5 - 16 )</label
+                  >
+                </div>
+              </div>
+              <img
+                src="../public/assets/images/1.webp"
+                class="rounded-xl"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="px-8 py-10 lg:px-24 lg:py-16 border-y border-gray-300">
+            <div class="flex justify-between flex-row-reverse">
+              <div class="flex justify-between items-end flex-col">
+                <div class="flex flex-col items-end">
+                  <h2 class="text-6xl font-medium">Health</h2>
+                  <p class="text-base text-right mt-2 max-w-[520px]">
+                    to improve children's fitness through balanced exercise
+                    sessions that strengthen the body, and develop an active
+                    lifestyle in a fun way.
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 font">
+                  <label
+                    class="px-4 uppercase text-base py-2 border border-gray-500 rounded-full"
+                    >Toddlers ( 2 - 4 )</label
+                  >
+                  <label
+                    class="px-4 uppercase text-base py-2 border border-gray-500 rounded-full"
+                    >Kids ( 5 - 16 )</label
+                  >
+                </div>
+              </div>
+              <img
+                src="../public/assets/images/2.webp"
+                class="rounded-xl"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="px-8 py-10 lg:px-24 lg:py-16 border-y border-gray-300">
+            <div class="flex justify-between">
+              <div class="flex justify-between flex-col">
+                <div>
+                  <h2 class="text-6xl font-medium">Competitive</h2>
+                  <p class="text-base mt-2 max-w-[520px]">
+                    Focus on advanced techniques, speed improvement, and
+                    preparation for competition, guided by our professional
+                    coaches.
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 font">
+                  <label
+                    class="px-4 uppercase text-base py-2 border border-gray-500 rounded-full"
+                    >Toddlers ( 2 - 4 )</label
+                  >
+                  <label
+                    class="px-4 uppercase text-base py-2 border border-gray-500 rounded-full"
+                    >Kids ( 5 - 16 )</label
+                  >
+                </div>
+              </div>
+              <img
+                src="../public/assets/images/3.webp"
+                class="rounded-xl"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-8 py-10 lg:px-24 lg:py-16 bg-white my-10 lg:my-16">
+        <!-- ATAS CARD COACH -->
+        <div class="flex justify-between">
+          <div class="flex items-center gap-2">
+            <label class="px-4 text-sm py-2 border border-gray-500 rounded-full"
+              >TEAM</label
+            >
+            <h2 class="text-4xl">Our Coach</h2>
+          </div>
+          <a
+            href=""
+            class="flex items-center bg-gray-900 gap-2 p-4 hover:bg-gray-950 text-white rounded-full"
+            >VIEW ALL
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </a>
+        </div>
+        <!-- CARD COACH -->
+        <div class="grid grid-cols-12 gap-4 mt-6">
+          <div class="relative col-span-6 lg:col-span-3">
+            <img
+              class="rounded-xl w-full"
+              src="../public/assets/images/coach1.png"
+              alt=""
+            />
+            <div class="p-4 absolute w-full bottom-2">
+              <div
+                class="cardCoach bg-blackTransparant w-full flex justify-between items-center p-4 strokeCoach rounded-xl"
+              >
+                <h2 class="text-base text-white">Ethan Rivera</h2>
+                <a
+                  href=""
+                  class="w-10 h-10 flex items-center bg-white gap-2 justify-center hover:bg-gray-100 text-gray-900 rounded-full"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="relative col-span-6 lg:col-span-3">
+            <img
+              class="rounded-xl w-full"
+              src="../public/assets/images/22.png"
+              alt=""
+            />
+            <div class="p-4 absolute w-full bottom-2">
+              <div
+                class="cardCoach bg-blackTransparant w-full flex justify-between items-center p-4 strokeCoach rounded-xl"
+              >
+                <h2 class="text-base text-white">Hiroshi Tanaka</h2>
+                <a
+                  href=""
+                  class="w-10 h-10 flex items-center bg-white gap-2 justify-center hover:bg-gray-100 text-gray-900 rounded-full"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative col-span-6 lg:col-span-3">
+            <img
+              class="rounded-xl w-full"
+              src="../public/assets/images/33.png"
+              alt=""
+            />
+            <div class="p-4 absolute w-full bottom-2">
+              <div
+                class="cardCoach bg-blackTransparant w-full flex justify-between items-center p-4 strokeCoach rounded-xl"
+              >
+                <h2 class="text-base text-white">Arjun Kapoor</h2>
+                <a
+                  href=""
+                  class="w-10 h-10 flex items-center bg-white gap-2 justify-center hover:bg-gray-100 text-gray-900 rounded-full"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative col-span-6 lg:col-span-3">
+            <img
+              class="rounded-xl w-full"
+              src="../public/assets/images/44.png"
+              alt=""
+            />
+            <div class="p-4 absolute w-full bottom-2">
+              <div
+                class="cardCoach bg-blackTransparant w-full flex justify-between items-center p-4 strokeCoach rounded-xl"
+              >
+                <h2 class="text-base text-white">Li Wei</h2>
+                <a
+                  href=""
+                  class="w-10 h-10 flex items-center bg-white gap-2 justify-center hover:bg-gray-100 text-gray-900 rounded-full"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full mt-6">
+          <p class="text-base text-right leading-[140%] text-gray-800">
+            Our coaches are experienced, certified, and ready to guide your
+            child <br />
+            to reach their full potential with a friendly and supportive
+            approach.
+          </p>
+        </div>
+      </section>
+
+      <section class="px-8 py-10 lg:px-24 lg:py-16 bg-white">
+        <div class="flex flex-col items-center mb-8">
+          <label
+            class="px-4 uppercase text-sm py-2 border border-gray-500 rounded-full"
+            >Pricelist</label
+          >
+          <h2 class="text-6xl font-bold leading-[100%] text-center">
+            Practicing together or <br />
+            one
+            <span class="inline-flex items-center align-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 ml-1 align-middle"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </span>
+            on
+            <span class="inline-flex items-center align-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 mx-1 align-middle"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </span>
+            one with private coach
+          </h2>
+        </div>
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-6 relative">
+            <img
+              class="w-full rounded-3xl"
+              src="../public/assets/images/paket1.png"
+              alt=""
+            />
+            <div
+              class="absolute text-white top-0 w-full h-full flex justify-center items-center flex-col"
+            >
+              <h2 class="text-5xl font-semibold">Team Splash</h2>
+              <p class="text-base font-normal text-white">
+                Berlatih dengan maksimal 4 anak
+              </p>
+              <p class="text-base font-normal text-white mt-4">Mulai dari</p>
+              <a
+                href=""
+                class="py-2 px-4 flex text-sm items-center bg-blue-700 mt-1 justify-center hover:bg-blue-800 text-white rounded-full"
+                ><span>Rp</span
+                ><span class="text-3xl font-semibold mx-1"> 99k </span>
+                <span>/ Session</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-span-6 relative">
+            <img
+              class="w-full rounded-3xl"
+              src="../public/assets/images/private.png"
+              alt=""
+            />
+            <div
+              class="absolute text-white top-0 w-full h-full flex justify-center items-center flex-col"
+            >
+              <h2 class="text-5xl font-semibold">Private Coach</h2>
+              <p class="text-base font-normal text-white">
+                Pelatihan Individual
+              </p>
+              <p class="text-base font-normal text-white mt-4">Mulai dari</p>
+              <a
+                href=""
+                class="py-2 px-4 flex text-sm items-center bg-blue-700 mt-1 justify-center hover:bg-blue-800 text-white rounded-full"
+                ><span>Rp</span
+                ><span class="text-3xl font-semibold mx-1"> 500k </span>
+                <span>/ Session</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="font uppercase text-sm text-white container-fluid px-12 pt-20 bg-[#181A17]"
+    >
+      <div class="flex justify-between lg:flex-row mb-24">
+        <img width="w-full" src="../public/assets/images/PISC.svg" alt="" />
+        <p class="text-white">Poseidon Swimming CLUB</p>
+      </div>
+      <div class="border-t flex justify-between items-center py-2">
+        <div>
+          <p class="text-white">©PISC All Right Reserved 2024</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="" class="hover:text-gray-300">Privacy Policy</a>
+          <a href="" class="hover:text-gray-300">Term of condititions</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="" class="hover:text-gray-300">Instagram</a>
+          <p class="text-white">|</p>
+          <a href="" class="hover:text-gray-300">Tiktok</a>
+          <p class="text-white">|</p>
+          <a href="" class="hover:text-gray-300">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+  </body>
+</html>
